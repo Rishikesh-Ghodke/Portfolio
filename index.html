@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Doe | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        /* Reset and base styles */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #f7f9fb;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(90deg, #4f8cff 0%, #3358e4 100%);
+            color: #fff;
+            padding: 48px 0 32px 0;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(79, 140, 255, 0.08);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            margin: 8px 0 0 0;
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        nav {
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(51, 88, 228, 0.05);
+            padding: 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            margin: 0 24px;
+        }
+
+        nav a {
+            display: block;
+            padding: 18px 0;
+            color: #3358e4;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.05rem;
+            transition: color 0.2s;
+            border-bottom: 2px solid transparent;
+        }
+
+        nav a:hover, nav a:focus {
+            color: #4f8cff;
+            border-bottom: 2px solid #4f8cff;
+        }
+
+        .section {
+            padding: 56px 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #3358e4;
+            margin-bottom: 24px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .skill {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(51, 88, 228, 0.07);
+            padding: 18px 28px;
+            font-size: 1.1rem;
+            color: #3358e4;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: transform 0.15s, box-shadow 0.15s;
+        }
+
+        .skill i {
+            font-size: 1.5rem;
+        }
+
+        .skill:hover {
+            transform: translateY(-4px) scale(1.04);
+            box-shadow: 0 6px 18px rgba(51, 88, 228, 0.13);
+        }
+
+        .projects-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 28px;
+            justify-content: center;
+        }
+
+        .project-card {
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 2px 12px rgba(51, 88, 228, 0.09);
+            padding: 28px 24px;
+            width: 320px;
+            transition: transform 0.15s, box-shadow 0.15s;
+        }
+
+        .project-card h3 {
+            margin-top: 0;
+            color: #4f8cff;
+            font-size: 1.3rem;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 8px 24px rgba(51, 88, 228, 0.15);
+        }
+
+        .social-links {
+            margin-top: 16px;
+        }
+
+        .social-links a {
+            color: #3358e4;
+            font-size: 1.7rem;
+            margin-right: 18px;
+            transition: color 0.2s;
+        }
+
+        .social-links a:hover {
+            color: #4f8cff;
+        }
+
+        footer {
+            background: #3358e4;
+            color: #fff;
+            text-align: center;
+            padding: 18px 0;
+            margin-top: 48px;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            box-shadow: 0 -2px 8px rgba(51, 88, 228, 0.07);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 700px) {
+            .skills-grid, .projects-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            .project-card, .skill {
+                width: 90%;
+            }
+            nav ul {
+                flex-direction: column;
+            }
+            nav li {
+                margin: 0 0 8px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Rishikesh Ghodke</h1>
+            <p>Web Developer | Software Engineer</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I'm a passionate web developer with expertise in front-end and back-end technologies, creating responsive and user-friendly applications.</p>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill"><i class="fab fa-html5"></i> HTML</div>
+                <div class="skill"><i class="fab fa-css3-alt"></i> CSS</div>
+                <div class="skill"><i class="fab fa-js"></i> JavaScript</div>
+                <div class="skill"><i class="fab fa-react"></i> React.js</div>
+                <div class="skill"><i class="fab fa-node"></i> Node.js</div>
+                <div class="skill"><i class="fas fa-database"></i> MongoDB</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>QuizMastery</h3>
+                    <p>A QuizMastery is an interactive platform that allows users to participate in quizzes on various topics such as general knowledge, science, mathematics, history, and more.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Cyphersafe</h3>
+                    <p>Cyphersafe is a secure platform that helps users store, manage, and retrieve their passwords safely</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="section">
+        <div class="container">
+            <h2>Education</h2>
+            <p>🎓 Bachelor of Science in Computer Science - XYZ University (2021-2025)</p>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>📧 Email: </p>
+            <p>📱 Phone: </p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 John Doe. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
