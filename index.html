@@ -75,6 +75,12 @@
 
         .section {
             padding: 56px 0;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 6px 32px rgba(51, 88, 228, 0.10);
+            margin: 40px auto;
+            width: 92%;
+            max-width: 950px;
         }
 
         .container {
@@ -173,13 +179,42 @@
             box-shadow: 0 -2px 8px rgba(51, 88, 228, 0.07);
         }
 
+        .education-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 28px;
+            justify-content: center;
+            margin-top: 16px;
+        }
+
+        .education-card {
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 2px 12px rgba(51, 88, 228, 0.09);
+            padding: 28px 24px;
+            width: 320px;
+            transition: transform 0.15s, box-shadow 0.15s;
+            text-align: center;
+        }
+
+        .education-card h3 {
+            margin-top: 0;
+            color: #4f8cff;
+            font-size: 1.2rem;
+        }
+
+        .education-card:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 8px 24px rgba(51, 88, 228, 0.15);
+        }
+
         /* Responsive Design */
         @media (max-width: 700px) {
-            .skills-grid, .projects-grid {
+            .skills-grid, .projects-grid, .education-grid {
                 flex-direction: column;
                 align-items: center;
             }
-            .project-card, .skill {
+            .project-card, .skill, .education-card {
                 width: 90%;
             }
             nav ul {
@@ -250,7 +285,14 @@
     <section id="education" class="section">
         <div class="container">
             <h2>Education</h2>
-            <p>🎓 Bachelor of Science in Computer Science - XYZ University (2021-2025)</p>
+            <div class="education-grid">
+                <div class="education-card">
+                    <h3>🎓 Bachelor of Science in Computer Science</h3>
+                    <p>XYZ University</p>
+                    <p>2021-2025</p>
+                </div>
+                <!-- Add more education cards here if needed -->
+            </div>
         </div>
     </section>
 
